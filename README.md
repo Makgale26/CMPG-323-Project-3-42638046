@@ -11,7 +11,7 @@ Setup Instructions
 
 ## Clone the Repository:
 
-git clone https://github.com/<Your-GitHub-Username>/CMPG-323-Project-3-<Your-Student-Number>.git
+git clone https://github.com/Makgale26/CMPG-323-Project-3-42638046/tree/main
 
 ## Configure the Database:
 
