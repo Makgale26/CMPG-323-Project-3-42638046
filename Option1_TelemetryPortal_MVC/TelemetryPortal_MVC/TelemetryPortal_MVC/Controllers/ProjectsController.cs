@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TelemetryPortal_MVC.Data;
 using TelemetryPortal_MVC.Models;
+using TelemetryPortal_MVC.Repository;
 
 namespace TelemetryPortal_MVC.Controllers
 {
@@ -22,7 +23,9 @@ namespace TelemetryPortal_MVC.Controllers
         // GET: Projects
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Projects.ToListAsync());
+            ProjectRepository clientrepository = new ProjectRepository();
+            var project = await clientrepository.GetAllAsync();
+            return View(project);
         }
 
         // GET: Projects/Details/5
