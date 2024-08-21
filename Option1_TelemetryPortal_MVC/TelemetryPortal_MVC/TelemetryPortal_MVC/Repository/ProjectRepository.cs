@@ -1,19 +1,26 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
 using TelemetryPortal_MVC.Data;
 using TelemetryPortal_MVC.Models;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace TelemetryPortal_MVC.Repository
 {
-    public class ProjectRepository
+    public class ProjectRepository : GenericRepository<Project>, IProjectRepository
     {
-        protected readonly TechtrendsContext _context = new TechtrendsContext();
+       
 
-        public async Task<IEnumerable<Project>> GetAllAsync()
+        public ProjectRepository(TechtrendsContext context):base(context)
         {
-            return await _context.Projects.ToListAsync();
+            
         }
+
+
+      
+        public Project GetAllProjects()
+        {
+            return _context.Projects.OrderByDescending(Project => Project.ProjectCreationDate).FirstOrDefault();
+
+        }
+
+
     }
 }

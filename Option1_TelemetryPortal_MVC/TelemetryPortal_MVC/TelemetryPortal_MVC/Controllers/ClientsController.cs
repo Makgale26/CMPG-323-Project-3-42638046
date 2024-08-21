@@ -15,17 +15,19 @@ namespace TelemetryPortal_MVC.Controllers
     public class ClientsController : Controller
     {
         private readonly TechtrendsContext _context;
+        private readonly IClientRepository _clientRepository;
 
-        public ClientsController(TechtrendsContext context)
+        public ClientsController(TechtrendsContext context, IClientRepository clientRepository)
         {
             _context = context;
+            _clientRepository = clientRepository;
         }
 
         // GET: Clients
         public async Task<IActionResult> Index()
         {
-            ClientRepository clientrepository = new ClientRepository();
-            var client = await clientrepository.GetAllAsync();
+            
+            var client =  _clientRepository.GetAll();
             return View(client);
         }
          

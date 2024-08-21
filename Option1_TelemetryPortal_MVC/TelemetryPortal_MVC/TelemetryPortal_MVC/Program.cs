@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Build.Evaluation;
 using Microsoft.EntityFrameworkCore;
 using TelemetryPortal_MVC.Data;
+using TelemetryPortal_MVC.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,11 +14,18 @@ builder.Services.AddDbContext<TechtrendsContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+
+builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddTransient<IClientRepository, ClientRepository>();//Dependency injection of Client
+builder.Services.AddTransient<IProjectRepository, ProjectRepository>();//Dependency injection of Project
+
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -14,17 +14,19 @@ namespace TelemetryPortal_MVC.Controllers
     public class ProjectsController : Controller
     {
         private readonly TechtrendsContext _context;
+        private readonly IProjectRepository _ProjectRepository;
 
-        public ProjectsController(TechtrendsContext context)
+        public ProjectsController(TechtrendsContext context, IProjectRepository projectRepo )
         {
             _context = context;
+            _ProjectRepository = projectRepo;
         }
 
         // GET: Projects
         public async Task<IActionResult> Index()
         {
-            ProjectRepository clientrepository = new ProjectRepository();
-            var project = await clientrepository.GetAllAsync();
+            
+            var project = _ProjectRepository.GetAll();
             return View(project);
         }
 
