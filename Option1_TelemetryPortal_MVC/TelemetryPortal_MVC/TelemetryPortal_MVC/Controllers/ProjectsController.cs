@@ -16,6 +16,7 @@ namespace TelemetryPortal_MVC.Controllers
         private readonly TechtrendsContext _context;
         private readonly IProjectRepository _ProjectRepository;
 
+        //Instantition  Controller
         public ProjectsController(TechtrendsContext context, IProjectRepository projectRepo )
         {
             _context = context;
@@ -23,7 +24,7 @@ namespace TelemetryPortal_MVC.Controllers
         }
 
         // GET: Projects
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             
             var project = _ProjectRepository.GetAll();

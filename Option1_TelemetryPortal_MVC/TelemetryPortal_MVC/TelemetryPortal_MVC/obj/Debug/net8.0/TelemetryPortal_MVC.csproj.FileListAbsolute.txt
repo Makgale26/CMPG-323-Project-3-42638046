@@ -535,3 +535,5 @@ C:\Users\User\source\repos\Makgale26\CMPG-323-Project-3-42638046\Option1_Telemet
 C:\Users\User\source\repos\Makgale26\CMPG-323-Project-3-42638046\Option1_TelemetryPortal_MVC\TelemetryPortal_MVC\TelemetryPortal_MVC\obj\Debug\net8.0\TelemetryPortal_MVC.pdb
 C:\Users\User\source\repos\Makgale26\CMPG-323-Project-3-42638046\Option1_TelemetryPortal_MVC\TelemetryPortal_MVC\TelemetryPortal_MVC\obj\Debug\net8.0\TelemetryPortal_MVC.genruntimeconfig.cache
 C:\Users\User\source\repos\Makgale26\CMPG-323-Project-3-42638046\Option1_TelemetryPortal_MVC\TelemetryPortal_MVC\TelemetryPortal_MVC\obj\Debug\net8.0\ref\TelemetryPortal_MVC.dll
+C:\Users\User\source\repos\Makgale26\CMPG-323-Project-3-42638046\Option1_TelemetryPortal_MVC\TelemetryPortal_MVC\TelemetryPortal_MVC\bin\Debug\net8.0\SendGrid.dll
+C:\Users\User\source\repos\Makgale26\CMPG-323-Project-3-42638046\Option1_TelemetryPortal_MVC\TelemetryPortal_MVC\TelemetryPortal_MVC\bin\Debug\net8.0\StarkbankEcdsa.dll

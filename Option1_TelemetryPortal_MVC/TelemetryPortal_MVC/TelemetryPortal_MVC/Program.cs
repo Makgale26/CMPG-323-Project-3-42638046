@@ -16,8 +16,10 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 
 builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-builder.Services.AddTransient<IClientRepository, ClientRepository>();//Dependency injection of Client
-builder.Services.AddTransient<IProjectRepository, ProjectRepository>();//Dependency injection of Project
+//Dependency injection of Client
+builder.Services.AddTransient<IClientRepository, ClientRepository>();
+//Dependency injection of Project
+builder.Services.AddTransient<IProjectRepository, ProjectRepository>();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();

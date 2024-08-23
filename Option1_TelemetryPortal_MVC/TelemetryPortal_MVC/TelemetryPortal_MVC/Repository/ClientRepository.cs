@@ -5,17 +5,17 @@ using TelemetryPortal_MVC.Repository;
 
 public class ClientRepository : GenericRepository<Client>, IClientRepository
 {
-   // private readonly TechtrendsContext _context;
-
-    public ClientRepository(TechtrendsContext context): base(context)
+    //Instantition
+    public ClientRepository(TechtrendsContext context) : base(context)
     {
-        //_context = context;
     }
-   
 
+
+
+    //Retrieve all projects
     public Client GetAllClient()
     {
         return _context.Clients.OrderByDescending(Client => Client.DateOnboarded).FirstOrDefault();   
             
-            }
+    }
 }

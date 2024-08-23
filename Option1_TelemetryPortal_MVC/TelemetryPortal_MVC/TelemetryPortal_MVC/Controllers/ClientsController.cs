@@ -17,6 +17,7 @@ namespace TelemetryPortal_MVC.Controllers
         private readonly TechtrendsContext _context;
         private readonly IClientRepository _clientRepository;
 
+        //Instantition  Controller
         public ClientsController(TechtrendsContext context, IClientRepository clientRepository)
         {
             _context = context;
@@ -24,13 +25,13 @@ namespace TelemetryPortal_MVC.Controllers
         }
 
         // GET: Clients
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            
-            var client =  _clientRepository.GetAll();
+
+            var client = _clientRepository.GetAll();
             return View(client);
         }
-         
+
         // GET: Clients/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
