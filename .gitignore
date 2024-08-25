@@ -24,8 +24,7 @@
 hs_err_pid*
 replay_pid*
 #Exclude .files
-.vs/
-.json
+
 
 ##Protect Sensitive Information
 appsettings.json
