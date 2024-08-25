@@ -31,3 +31,5 @@ replay_pid*
 appsettings.json
 appsettings.Development.json
 .env
+/Option1_TelemetryPortal_MVC/TelemetryPortal_MVC/TelemetryPortal_MVC/appsettings.json
+/Option1_TelemetryPortal_MVC/TelemetryPortal_MVC/TelemetryPortal_MVC/appsettings.Development.json
