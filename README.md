@@ -25,3 +25,8 @@ Deployment
 Publish the application to Azure App Service using Visual Studio's Publish tool.
 Usage
 Access the application via the deployed Azure URL to manage projects and clients.
+
+click link - telemetryportalmvc20240823153542.azurewebsites.net
+
+# Reference
+https://github.com/Makgale26/CMPG-323-Project-3-42638046/blob/main/Project3%20reference%20list.txt
